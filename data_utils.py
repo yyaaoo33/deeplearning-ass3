@@ -1,12 +1,12 @@
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
+import torch
 
 def add_features(df):
-
     df['MA_5'] = df['Close'].rolling(window=5).mean()
     df['MA_10'] = df['Close'].rolling(window=10).mean()
-
+    
     df['Volatility'] = (df['High'] - df['Low']) / df['Open']
     
     df.fillna(method='bfill', inplace=True)
@@ -37,7 +37,7 @@ def load_and_preprocess_data(file_path, sequence_length, prediction_length):
         scaled_data[column] = scalers[column].fit_transform(df[column].values.reshape(-1, 1)).flatten()
     
     features = scaled_data[['Open', 'High', 'Low', 'Close', 'Volume', 'MA_5', 'MA_10', 'Volatility']].values
-    targets = scaled_data[['Close']].values 
+    targets = scaled_data[['Close']].values  
     
     X, y = [], []
     for i in range(len(features) - sequence_length - prediction_length + 1):

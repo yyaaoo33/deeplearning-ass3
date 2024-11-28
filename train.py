@@ -26,7 +26,7 @@ def train_model(model, train_loader, val_loader, criterion, optimizer, num_epoch
         save_path = f"{model_name}_best_model.pth"
         if val_loss < best_val_loss:
             best_val_loss = val_loss
-            torch.save(model.state_dict(), save_path)
+            torch.save(model, save_path)
         
         print(f"Epoch [{epoch+1}/{num_epochs}] - Train Loss: {train_loss:.4f}, Val Loss: {val_loss:.4f}")
 
@@ -60,6 +60,7 @@ def evaluate_metrics(model, test_loader, criterion, scalers, device):
             outputs_np = outputs.cpu().numpy()
             y_batch_np = y_batch.cpu().numpy()
             
+            # Modified: Only handle Close price
             pred_close = scalers['Close'].inverse_transform(outputs_np.reshape(-1, 1))
             actual_close = scalers['Close'].inverse_transform(y_batch_np.reshape(-1, 1))
 
