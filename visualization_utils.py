@@ -92,3 +92,4 @@ def plot_test_predictions_only(model, test_loader, dates, sequence_length, devic
     print(f"RMSE: {metrics['RMSE']:.2f}")
     print(f"MAE: {metrics['MAE']:.2f}")
     print(f"MAPE: {metrics['MAPE']:.2f}%")
+    

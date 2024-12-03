@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2023)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: egpaper_final.aux
+The style file: ieee_fullname.bst
+Database file #1: egbib.bib
+Warning--I didn't find a database entry for "Authors14"
+You've used 14 entries,
+            2120 wiz_defined-function locations,
+            585 strings with 6277 characters,
+and the built_in function-call counts, 6037 in all, are:
+= -- 612
+> -- 270
+< -- 6
++ -- 107
+- -- 92
+* -- 430
+:= -- 935
+add.period$ -- 42
+call.type$ -- 14
+change.case$ -- 88
+chr.to.int$ -- 0
+cite$ -- 14
+duplicate$ -- 230
+empty$ -- 462
+format.name$ -- 92
+if$ -- 1292
+int.to.chr$ -- 0
+int.to.str$ -- 14
+missing$ -- 14
+newline$ -- 73
+num.names$ -- 28
+pop$ -- 89
+preamble$ -- 1
+purify$ -- 74
+quote$ -- 0
+skip$ -- 190
+stack$ -- 0
+substring$ -- 494
+swap$ -- 81
+text.length$ -- 6
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 56
+warning$ -- 0
+while$ -- 60
+width$ -- 16
+write$ -- 155
+(There was 1 warning)
